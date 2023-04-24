@@ -800,9 +800,8 @@ body .is-active {
   background-size: cover;
   background-color: #111319;
   margin: 0 auto;
-  min-width: 1400px;
   padding: 120px 0;
-  max-width: 1600px;
+  width: 100vw;
 }
 @media screen and (max-width: 767.98px) {
   .price {
@@ -825,7 +824,7 @@ body .is-active {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   background: url("../img/prices-bg-desktop-x1.jpg") 0 0 no-repeat;
   background-position: 50% 50%;
