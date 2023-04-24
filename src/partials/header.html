@@ -1,13 +1,131 @@
 <header class="header">
-  <nav class="nav">
-    <ul class="nav-list">
-      <li class="nav-item">
-        <a href="./page-2.html" class="nav-link">Page 2</a>
-      </li>
+  <div class="header__container">
+    <nav class="header__nav">
+      <!-- lOGO -->
+      <a class="header__logo" href="">
+        <picture>
+          <source media="(max-width:767.98px)" srcset="./img/logowhite.svg" />
+          <source media="(min-width:768px)" srcset="./img/logo.svg" />
+          <img src="./logo.svg" alt="" />
+        </picture>
+      </a>
 
-      <li class="nav-item">
-        <a href="./page-3.html" class="nav-link">Page 3</a>
-      </li>
-    </ul>
-  </nav>
+      <!-- Меню Десктоп -->
+      <ul class="header__menu">
+        <li class="header__item">
+          <a href="#about" class="header__link">About</a>
+        </li>
+        <li class="header__item">
+          <a href="#price" class="header__link">Services and prices</a>
+        </li>
+        <li class="header__item">
+          <a href="#barbers" class="header__link">Barbers</a>
+        </li>
+        <li class="header__item">
+          <a href="#contacts" class="header__link">Contacts</a>
+        </li>
+      </ul>
+
+      <!-- Меню  бургер -->
+
+      <button
+        class="menu-toggle js-open-menu modal-scroll"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg class="menu-button-icon" width="24" height="24">
+          <use href="./img/icons/icons.svg#burger"></use>
+        </svg>
+      </button>
+
+      <div class="menu-container js-menu-container" id="mobile-menu">
+        <div class="backdrop">
+          <button type="button" class="menu-toggle js-close-menu modal-scroll">
+            <svg class="menu-button-close" width="24" height="24">
+              <use href="./img/icons/icons.svg#close"></use>
+            </svg>
+          </button>
+          <!-- Mobile menu -->
+          <ul class="header__mobile-menu header-mobile__menu">
+            <li class="header-mobile__item">
+              <a
+                href="#about"
+                class="modal-scroll header-mobile__link nav-menu-link"
+                >About</a
+              >
+            </li>
+            <li class="header-mobile__item">
+              <a
+                href="#price"
+                class="modal-scroll header-mobile__link nav-menu-link"
+                >Services and prices</a
+              >
+            </li>
+            <li class="header-mobile__item">
+              <a
+                href="#barbers"
+                class="modal-scroll header-mobile__link nav-menu-link"
+                >Barbers</a
+              >
+            </li>
+            <li class="header-mobile__item">
+              <a
+                href="#contacts"
+                class="modal-scroll header-mobile__link nav-menu-link"
+                >Contacts</a
+              >
+            </li>
+          </ul>
+
+          <ul class="header__mobile-actions header-mobile-actions">
+            <li class="header-mobile-actions__item">
+              <a
+                href="tel:+380441111111"
+                class="header-mobile-actions__link modal-scroll nav-menu-link"
+                >+38 044 111 11 11</a
+              >
+            </li>
+            <li class="header-mobile-actions__item">
+              <a
+                href="#contacts"
+                class="header-mobile-actions__link_button button modal-scroll nav-menu-link"
+                >Online-booking</a
+              >
+            </li>
+          </ul>
+
+          <ul class="header__mobile-social mobile-social-header__menu">
+            <li class="mobile-social-header__item">
+              <a
+                class="mobile-social-header__link nav-menu-link"
+                href="http://instagram.com"
+                >Instagram</a
+              >
+            </li>
+            <li class="mobile-social-header__item">
+              <a
+                class="mobile-social-header__link nav-menu-link"
+                href="http://youtube.com"
+                >Youtube</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Меню Активности -->
+      <ul class="header__action-menu header-action-menu">
+        <li class="header-action-menu__item">
+          <a href="tel:+380441111111" class="header-action-menu__link"
+            >+38 044 111 11 11</a
+          >
+        </li>
+        <li class="header-action-menu__item">
+          <a href="#contacts" class="header-action-menu__button button"
+            >Online-booking</a
+          >
+        </li>
+      </ul>
+    </nav>
+  </div>
 </header>
