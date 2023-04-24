@@ -90,15 +90,6 @@ body .is-active {
 
 .wrapper {
   min-height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -803,6 +794,7 @@ body .is-active {
   margin: 0 auto;
   padding: 120px 0;
   width: 100vw;
+  left: 50%;
 }
 @media screen and (max-width: 767.98px) {
   .price {
@@ -825,7 +817,6 @@ body .is-active {
   position: absolute;
   margin: 0 auto;
   top: 0;
-  left: 50%;
   width: 100vw;
   height: 100%;
   background: url("../img/prices-bg-desktop-x1.jpg") 0 0 no-repeat;
