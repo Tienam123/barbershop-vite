@@ -9,7 +9,7 @@
 *:before,
 *:after {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html,
@@ -22,7 +22,7 @@ body {
 body {
   color: #555555;
   line-height: 1;
-  font-family: "Opensans";
+  font-family: 'Opensans';
   font-size: 0.875rem;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -34,7 +34,7 @@ body {
 input,
 button,
 textarea {
-  font-family: "Opensans";
+  font-family: 'Opensans';
   font-size: inherit;
 }
 
@@ -75,16 +75,16 @@ body {
 .lock body {
   overflow: hidden;
   -ms-touch-action: none;
-      touch-action: none;
+  touch-action: none;
   -ms-scroll-chaining: none;
-      overscroll-behavior: none;
+  overscroll-behavior: none;
 }
 body .is-active {
   overflow: hidden;
   -ms-touch-action: none;
-      touch-action: none;
+  touch-action: none;
   -ms-scroll-chaining: none;
-      overscroll-behavior: none;
+  overscroll-behavior: none;
 }
 
 .wrapper {
@@ -94,13 +94,13 @@ body .is-active {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 .wrapper > main {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 .wrapper > * {
   min-width: 0;
@@ -112,18 +112,18 @@ body .is-active {
 Наприклад header__container, main__container і т.п.
 Сніппет (HTML): cnt
 */
-[class*=__container] {
+[class*='__container'] {
   margin: 0 auto;
   max-width: 75rem;
   padding: 0 0.9375rem;
 }
 @media (max-width: 61.99875em) {
-  [class*=__container] {
+  [class*='__container'] {
     max-width: 48rem;
   }
 }
 @media (max-width: 47.99875em) {
-  [class*=__container] {
+  [class*='__container'] {
     max-width: 23.4375rem;
     padding: 0 0.9375rem;
   }
@@ -134,8 +134,8 @@ body header {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   background-color: red;
 }
 body header .header__container {
