@@ -1,0 +1,72 @@
+//========================/ Section - about /===================================//
+.about {
+   @include max-767 {
+      padding: 5.25rem 0;
+   }
+   @include min-768 {
+      padding: 6.25rem 0;
+   }
+   @include min-1200 {
+      padding: 7.5rem 0;
+   }
+   // .about__container
+   &__container {
+      @include min-768 {
+         display: flex;
+      }
+
+      column-gap: 2.5rem;
+   }
+   // .about__images-row
+   &__images-row {
+      display: flex;
+      flex: 0 0 50%;
+      column-gap: 2.5rem;
+      @include max-1199 {
+         flex-direction: column;
+         row-gap: 1.875rem;
+      }
+      @include max-767 {
+         margin-bottom: 5.25rem;
+      }
+   }
+}
+.row-images {
+   // .row-images__item
+   &__item {
+   }
+}
+.content {
+   // .content__about
+   &__about {
+   }
+}
+.about-content {
+   // .about-content__subtitle
+   &__subtitle {
+      margin-bottom: 20px;
+      color: $titlecolor;
+   }
+   // .about-content__title
+   &__title {
+   }
+   // .about-content__description
+   &__description {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 30px;
+      letter-spacing: 0.02em;
+      color: #555555;
+      margin-bottom: 20px;
+   }
+   // .about-content__text
+   &__text {
+      color: #555555;
+      margin-bottom: 42px;
+   }
+   // .about-content__button
+   &__button {
+      color: #303030;
+   }
+}
+//========================/ Section - about /===================================//

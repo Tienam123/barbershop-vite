@@ -1,0 +1,115 @@
+//========================/ Section - Team /===================================//
+.team {
+   @include max-767 {
+      padding: 84px 0;
+   }
+   @include min-768 {
+      padding: 100px 0;
+   }
+   @include min-1200 {
+      padding: 120px 0;
+   }
+
+   // .team__container
+   &__container {
+   }
+   // .team__subtitle
+   &__subtitle {
+      font-weight: 600;
+      font-size: 11px;
+      line-height: 15px;
+      text-transform: uppercase;
+      color: #303030;
+      &::before {
+         content: " ";
+         display: inline-block;
+         width: 60px;
+         height: 1px;
+         background-color: rgba(157, 164, 189, 0.6);
+         position: relative;
+         top: -3px;
+         margin-right: 20px;
+      }
+   }
+   // .team__title
+   &__title {
+      font-weight: 700;
+      font-size: 42px;
+      line-height: 49px;
+      letter-spacing: 0.05em;
+      margin-top: 20px;
+      color: #303030;
+   }
+   // .team__cards-row
+   &__cards-row {
+      margin-top: 44px;
+      @include min-1200 {
+         display: flex;
+         column-gap: 30px;
+      }
+   }
+   // .team__social
+   &__social {
+      display: flex;
+      column-gap: 10px;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+   }
+}
+.team-cards-row {
+   // .team-cards-row__item
+   &__item {
+      @include max-1199 {
+         &:not(:last-child) {
+            margin-bottom: 64px;
+         }
+      }
+   }
+   // .team-cards-row__about-card-wrapper
+   &__about-card-wrapper {
+      margin-top: 30px;
+   }
+   // .team-cards-row__name
+   &__name {
+      font-size: 18px;
+      line-height: 25px;
+      text-align: center;
+      letter-spacing: 0.02em;
+      color: #303030;
+   }
+   // .team-cards-row__profession
+   &__profession {
+      font-size: 14px;
+      line-height: 19px;
+      text-align: center;
+      letter-spacing: 0.02em;
+      color: #ff6c00;
+      margin-top: 8px;
+   }
+}
+.team-social {
+   // .team-social__item
+   &__item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+   // .team-social__link
+   &__link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 12px;
+      background-color: #fff;
+      border-radius: 50%;
+      &:hover svg {
+         fill: $hovercolor;
+      }
+      svg {
+         fill: black;
+      }
+   }
+}
+
+//========================/ Section - Team /===================================//

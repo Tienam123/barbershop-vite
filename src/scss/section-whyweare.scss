@@ -1,0 +1,154 @@
+//========================/ Section WhyWeAre /====================================//
+.whyweare {
+  background-color: #fff;
+   @include max-767 {
+      padding: 84px 0;
+   }
+   @include min-768{
+      padding: 100px 0;
+   }
+   @include min-1200 {
+      padding: 120px 101px 120px 69px;
+   }
+   // .whyweare__container
+   &__container {
+      display: flex;
+      @include min-1200 {
+      justify-content: center;
+      }
+      @include max-1199 {
+         flex-direction: column;
+         row-gap: 44px;
+      }
+      
+   
+   }
+   // .whyweare__testmonials
+   &__testmonials {
+      
+      display: flex;
+      column-gap: 30px;
+   
+     
+      @include max-1199 {
+         order: 2;
+         justify-content: flex-end;
+         padding-left: 70px;
+         margin-left: auto;
+      }
+      @include max-479 {
+         flex-wrap: wrap;
+      }
+      @include max-767 {
+         justify-content: center;
+         padding: 0px 0px 0px 0px;
+         margin-right: auto;
+      }
+     
+   }
+   // .whyweare__content
+   &__content {
+      
+      flex: 0 0 65%;
+     
+      @include min768-max1199 {
+         width: 500px;
+      }
+      @include max-1199 {
+         order: 1;
+      }
+      @include min-1200 {
+         padding: 0px 0px 0px 130px;
+      }
+      
+   }
+}
+.testmonials-whyweare {
+   // .testmonials-whyweare__menu
+   &__menu {
+      &:nth-child(2) {
+         margin-top: 40px;
+      }
+   }
+   // .testmonials-whyweare__items
+   &__items {
+      width: 170px;
+      min-height: 133px;
+      background-color: #f7f7f7;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 24px;
+      &:not(:last-child) {
+         margin-bottom: 30px;
+      }
+   }
+   // .testmonials-whyweare__title
+   &__title {
+      position: relative;
+      font-weight: 700;
+      font-size: 42px;
+      line-height: 57px;
+      text-align: center;
+      letter-spacing: 0.05em;
+      color: #303030;
+      sup {
+         position: absolute;
+         font-size: 16px;
+         line-height: 22px;
+         color: $hovercolor;
+      }
+   }
+   // .testmonials-whyweare__text
+   &__text {
+      font-weight: 600;
+      font-size: 11px;
+      line-height: 15px;
+      text-align: center;
+
+      color: #303030;
+   }
+}
+.content-whyweare {
+   // .content-whyweare__subtitle
+   &__subtitle {
+      font-weight: 600;
+      font-size: 11px;
+      line-height: 15px;
+      text-transform: uppercase;
+      color: #303030;
+      margin-bottom: 20px;
+
+      &::before {
+         content: " ";
+         display: inline-block;
+         width: 60px;
+         height: 1px;
+         background-color: rgba(157, 164, 189, 0.6);
+         position: relative;
+         top: -3px;
+         margin-right: 20px;
+      }
+   }
+   // .content-whyweare__title
+   &__title {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 42px;
+      line-height: 49px;
+      letter-spacing: 0.05em;
+      color: #303030;
+      margin-bottom: 20px;
+   }
+   // .content-whyweare__text
+   &__text {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 30px;
+      letter-spacing: 0.02em;
+      color: #555555;
+   }
+}
+
+//========================/ Section WhyWeAre /====================================//
