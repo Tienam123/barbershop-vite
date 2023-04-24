@@ -707,7 +707,7 @@ body .is-active {
   background-color: #fff;
 }
 .hero-content-actions__item::before {
-  content: "";
+  content: " ";
   display: block;
   width: 3.75rem;
   height: 0.0625rem;
