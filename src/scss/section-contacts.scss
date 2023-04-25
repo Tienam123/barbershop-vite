@@ -5,11 +5,13 @@
    background-color: #191c26;
    z-index: 1;
    max-width: 1600px;
+   @include adaptiveValue("padding-top", 130, 84);
+   @include adaptiveValue("padding-bottom", 130, 84);
    &::before {
       content: " ";
       display: block;
       background: url("../img/footer-desktop-bg-x1.jpg");
-      z-index: 2;
+      z-index: 1;
       position: absolute;
       @include min-1200 {
          top: 0;
@@ -18,20 +20,22 @@
          height: 100%;
       }
       @include min768-max1199 {
-         top: 50%;
+         top: 53%;
          width: 100%;
-         height: 50%;
+         height: 47%;
       }
       @include max-767 {
-         top: 54%;
+         top: 55%;
          width: 100%;
-         height: 46%;
+         height: 45%;
       }
       opacity: 0.1;
       background-size: cover;
    }
    // .contacts__container
    &__container {
+      color: $mainTextColor;
+
       flex-wrap: wrap;
       @include min-1200 {
          display: flex;
@@ -40,11 +44,27 @@
    // .contacts__form-wrapper
    &__form-wrapper {
       flex: 0 0 50%;
+      outline: 2px solid red;
+      @include max-767 {
+         padding-bottom: 84px;
+      }
+      @include min768-max1199 {
+         padding-bottom: 100px;
+      }
+      @include min-1200 {
+         padding-right: 25px;
+      }
    }
    // .contacts__contact-wrapper
    &__contact-wrapper {
       flex: 0 0 50%;
-      z-index: 5;
+      outline: 2px solid yellow;
+      @include max-767 {
+         padding-top: 84px;
+      }
+      @include min768-max1199 {
+         padding-top: 100px;
+      }
    }
 }
 .form-wrapper {
@@ -61,7 +81,7 @@
    }
    // .form-wrapper-contacts__input
    &__input {
-      width: calc((100% - 54px) / 2);
+      width: calc((100% - 56px) / 2);
       background-color: #191c26;
       color: rgba(157, 164, 189, 0.4);
       border-bottom: 1px solid currentColor;
@@ -120,17 +140,19 @@
    // .contacts-contact-wrapper__adress
    &__adress {
       display: block;
+      z-index: 1000;
 
       margin-top: 40px;
    }
    // .contacts-contact-wrapper__phone
    &__phone {
       display: block;
+      z-index: 1000;
    }
    // .contacts-contact-wrapper__mail
    &__mail {
       display: block;
-
+      z-index: 1000;
       margin-top: 20px;
    }
    // .contacts-contact-wrapper__subtitle

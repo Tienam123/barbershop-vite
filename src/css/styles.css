@@ -132,6 +132,7 @@ body .is-active {
   font-weight: 600;
   font-size: 11px;
   line-height: 15px;
+  margin-bottom: 20px;
   /* identical to box height */
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -170,7 +171,7 @@ body .is-active {
 .button {
   font-weight: 600;
   font-size: 12px;
-  line-height: 1.33;
+  line-height: 1.3;
   letter-spacing: 0.09em;
   text-transform: uppercase;
   color: #fff;
@@ -179,6 +180,8 @@ body .is-active {
   border-radius: 25px;
   -webkit-transition: all 300ms ease-in;
   transition: all 300ms ease-in;
+  min-width: 160px;
+  z-index: 50;
 }
 .button:focus, .button:hover {
   background-color: #ff6c00;
@@ -974,6 +977,7 @@ body .is-active {
   content: " ";
   display: block;
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   width: 100vw;
@@ -1271,7 +1275,11 @@ body .is-active {
 }
 .testmonials-whyweare__title {
   position: relative;
+  font-size: 42px;
   line-height: 57px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #303030;
   text-align: center;
 }
 .testmonials-whyweare__title sup {
@@ -1280,6 +1288,14 @@ body .is-active {
   line-height: 22px;
   color: #ff6c00;
 }
+.testmonials-whyweare__text {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 15px;
+  text-align: center;
+  color: #303030;
+}
+
 @media (min-width: 75em) {
   .team {
     padding-top: 7.5rem;
@@ -1504,11 +1520,55 @@ body .is-active {
   z-index: 1;
   max-width: 1600px;
 }
+@media (min-width: 75em) {
+  .contacts {
+    padding-top: 8.125rem;
+  }
+}
+@media (min-width: 17.5em) and (max-width: 75em) {
+  @supports (padding-top: clamp( 5.25rem , 4.375rem  +  5vw , 8.125rem )) {
+    .contacts {
+      padding-top: clamp( 5.25rem , 4.375rem  +  5vw , 8.125rem );
+    }
+  }
+  @supports not (padding-top: clamp( 5.25rem , 4.375rem  +  5vw , 8.125rem )) {
+    .contacts {
+      padding-top: calc(5.25rem + 2.875 * (100vw - 17.5rem) / 57.5);
+    }
+  }
+}
+@media (max-width: 17.5em) {
+  .contacts {
+    padding-top: 5.25rem;
+  }
+}
+@media (min-width: 75em) {
+  .contacts {
+    padding-bottom: 8.125rem;
+  }
+}
+@media (min-width: 17.5em) and (max-width: 75em) {
+  @supports (padding-bottom: clamp( 5.25rem , 4.375rem  +  5vw , 8.125rem )) {
+    .contacts {
+      padding-bottom: clamp( 5.25rem , 4.375rem  +  5vw , 8.125rem );
+    }
+  }
+  @supports not (padding-bottom: clamp( 5.25rem , 4.375rem  +  5vw , 8.125rem )) {
+    .contacts {
+      padding-bottom: calc(5.25rem + 2.875 * (100vw - 17.5rem) / 57.5);
+    }
+  }
+}
+@media (max-width: 17.5em) {
+  .contacts {
+    padding-bottom: 5.25rem;
+  }
+}
 .contacts::before {
   content: " ";
   display: block;
   background: url("../img/footer-desktop-bg-x1.jpg");
-  z-index: 2;
+  z-index: 1;
   position: absolute;
   opacity: 0.1;
   background-size: cover;
@@ -1523,19 +1583,20 @@ body .is-active {
 }
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .contacts::before {
-    top: 50%;
+    top: 53%;
     width: 100%;
-    height: 50%;
+    height: 47%;
   }
 }
 @media screen and (max-width: 767.98px) {
   .contacts::before {
-    top: 54%;
+    top: 55%;
     width: 100%;
-    height: 46%;
+    height: 45%;
   }
 }
 .contacts__container {
+  color: #9da4bd;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -1550,12 +1611,38 @@ body .is-active {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 50%;
           flex: 0 0 50%;
+  outline: 2px solid red;
+}
+@media screen and (max-width: 767.98px) {
+  .contacts__form-wrapper {
+    padding-bottom: 84px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .contacts__form-wrapper {
+    padding-bottom: 100px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__form-wrapper {
+    padding-right: 25px;
+  }
 }
 .contacts__contact-wrapper {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 50%;
           flex: 0 0 50%;
-  z-index: 5;
+  outline: 2px solid yellow;
+}
+@media screen and (max-width: 767.98px) {
+  .contacts__contact-wrapper {
+    padding-top: 84px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .contacts__contact-wrapper {
+    padding-top: 100px;
+  }
 }
 
 @media screen and (max-width: 767.98px) {
@@ -1564,7 +1651,7 @@ body .is-active {
   }
 }
 .form-wrapper-contacts__input {
-  width: calc((100% - 54px) / 2);
+  width: calc((100% - 56px) / 2);
   background-color: #191c26;
   color: rgba(157, 164, 189, 0.4);
   border-bottom: 1px solid currentColor;
@@ -1641,12 +1728,15 @@ body .is-active {
 
 .contacts-contact-wrapper__adress {
   display: block;
+  z-index: 1000;
   margin-top: 40px;
 }
 .contacts-contact-wrapper__phone {
   display: block;
+  z-index: 1000;
 }
 .contacts-contact-wrapper__mail {
   display: block;
+  z-index: 1000;
   margin-top: 20px;
 }

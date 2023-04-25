@@ -2,6 +2,7 @@
    font-weight: 600;
    font-size: 11px;
    line-height: 15px;
+   margin-bottom: 20px;
    /* identical to box height */
 
    letter-spacing: 0.1em;
@@ -39,7 +40,7 @@
 .button {
    font-weight: 600;
    font-size: 12px;
-   line-height: 1.33;
+   line-height: 1.3;
    letter-spacing: 0.09em;
    text-transform: uppercase;
    color: $textWhite;
@@ -47,6 +48,8 @@
    border: 1px solid $hovercolor;
    border-radius: 25px;
    transition: all $animation;
+   min-width: 160px;
+   z-index: 50;
    &:focus,
    &:hover {
       background-color: $hovercolor;
