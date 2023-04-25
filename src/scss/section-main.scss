@@ -8,6 +8,11 @@
     background-position: 50% 0%;
     background-size: cover;
   }
+  @include min480-max767-retina {
+    background: url("../img/hero-tablet-bg-x2.jpg") 0 0 no-repeat;
+    background-position: 50% 0%;
+    background-size: cover;
+  }
   // .hero__container
   &__container {
     position: relative;
@@ -16,8 +21,17 @@
       background-position: 50% 0%;
       background-size: cover;
     }
+    @include max479-retina {
+      background: url("../img/hero-mobile-bg-x2.jpg") 0 0 no-repeat;
+      background-position: 50% 0%;
+      background-size: cover;
+    }
     @include min-1200 {
       background: url("../img/hero-desktop-bg-x1.jpg") 0 0 no-repeat;
+      background-position: top right;
+    }
+    @include min1200-retina {
+      background: url("../img/hero-desktop-bg-x2.jpg") 0 0 no-repeat;
       background-position: top right;
     }
   }
@@ -48,6 +62,11 @@
   &__content {
     @include min768-max1199 {
       background: url("../img/hero-tablet-bg-x1.jpg") 0 0 no-repeat;
+      background-position: top right;
+      background-size: cover;
+    }
+    @include min768-max1199-retina {
+      background: url("../img/hero-tablet-bg-x2.jpg") 0 0 no-repeat;
       background-position: top right;
       background-size: cover;
     }
