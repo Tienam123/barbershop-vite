@@ -133,9 +133,9 @@
 	overflow: auto;
 	height: 100vh;
 	background-color: $textWhite;
-	padding: 40px;
 	display: flex;
 	flex-direction: column;
+	padding: 40px 0px 40px 40px;
 	justify-content: space-between;
 	@include max-479 {
 		width: 70%;
@@ -200,6 +200,10 @@
 		line-height: 1.38;
 		&_button {
 			color: #000;
+			&:focus,
+			&:hover {
+				color: $textWhite;
+			}
 		}
 	}
 	&__button {
@@ -223,6 +227,15 @@
 	}
 	// .mobile-social-header__link
 	&__link {
+	}
+}
+.mobile-social-header__item.social-line {
+	&:not(:last-child) {
+		&::before {
+			position: absolute;
+			top: 10px;
+			left: -30px;
+		}
 	}
 }
 .header-action-menu {

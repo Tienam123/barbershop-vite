@@ -2,6 +2,7 @@
 .about {
    @include adaptiveValue("padding-top", 120, 84);
    @include adaptiveValue("padding-bottom", 120, 84);
+
    // .about__container
    &__container {
       @include min-768 {
@@ -32,6 +33,12 @@
 .content {
    // .content__about
    &__about {
+      @include adaptiveValue("padding-top", 88, 50, 2, 991, 768);
+      @include adaptiveValue("padding-top", 0, 70, 2, 1200, 991);
+
+      @include max-767 {
+         padding: 0px 40px;
+      }
    }
 }
 .about-content {

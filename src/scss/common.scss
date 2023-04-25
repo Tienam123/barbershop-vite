@@ -1,13 +1,40 @@
-.line-text {
+.subtitle {
+   font-weight: 600;
+   font-size: 11px;
+   line-height: 15px;
+   /* identical to box height */
+
+   letter-spacing: 0.1em;
+   text-transform: uppercase;
+
+   color: rgba(157, 164, 189, 0.6);
    &::before {
       content: " ";
       display: inline-block;
       width: 3.75rem;
       height: 0.0625rem;
-      background-color: $titlecolor;
-      transform: translateX(-100%);
+      background-color: rgba(157, 164, 189, 0.6);
       margin-right: 1.25rem;
+      position: relative;
+      top: -0.1875rem;
    }
+}
+.title {
+   font-family: "Raleway";
+   font-style: normal;
+   font-weight: 700;
+   font-size: 40px;
+   line-height: 1.17;
+   letter-spacing: 0.05em;
+   color: $textWhite;
+   margin-bottom: 20px;
+   &_black {
+      color: #303030;
+   }
+}
+.text {
+   font-size: 14px;
+   line-height: 1.85;
 }
 .button {
    font-weight: 600;
@@ -33,14 +60,30 @@
       color: $hovercolor;
    }
 }
+.social-link {
+   font-weight: 600;
+   font-size: 11px;
+   line-height: 15px;
+   letter-spacing: 0.2em;
+   transition: all $animation;
+   &:hover,
+   &:focus {
+      color: $hovercolor;
+   }
+}
 
-.title {
-   font-family: "Raleway";
-   font-style: normal;
-   font-weight: 700;
-   font-size: 40px;
-   line-height: 1.17;
-   letter-spacing: 0.05em;
-   color: $textWhite;
-   margin-bottom: 20px;
+.social-line {
+   position: relative;
+   &:not(:last-child) {
+      &::before {
+         content: " ";
+         display: inline-block;
+         width: 60px;
+         height: 1px;
+         background-color: rgba(157, 164, 189, 0.4);
+         position: absolute;
+         margin-right: 40px;
+         transform: translate(-100%);
+      }
+   }
 }
