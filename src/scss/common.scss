@@ -9,3 +9,38 @@
       margin-right: 1.25rem;
    }
 }
+.button {
+   font-weight: 600;
+   font-size: 12px;
+   line-height: 1.33;
+   letter-spacing: 0.09em;
+   text-transform: uppercase;
+   color: $textWhite;
+   padding: 12px 20px;
+   border: 1px solid $hovercolor;
+   border-radius: 25px;
+   transition: all $animation;
+   &:focus,
+   &:hover {
+      background-color: $hovercolor;
+   }
+}
+
+.link_hover {
+   transition: color $animation;
+   &:focus,
+   &:hover {
+      color: $hovercolor;
+   }
+}
+
+.title {
+   font-family: "Raleway";
+   font-style: normal;
+   font-weight: 700;
+   font-size: 40px;
+   line-height: 1.17;
+   letter-spacing: 0.05em;
+   color: $textWhite;
+   margin-bottom: 20px;
+}

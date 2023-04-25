@@ -115,6 +115,8 @@
   }
   // .hero-content__title
   &__title {
+    font-size: 48px;
+    line-height: 1.16; /* 56px/48 */
   }
 
   // .hero-content__text

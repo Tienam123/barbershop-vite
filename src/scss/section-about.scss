@@ -59,7 +59,11 @@
    }
    // .about-content__button
    &__button {
-      color: #303030;
+      color: $mainColor;
+      &:hover,
+      &:focus {
+         color: $textWhite;
+      }
    }
 }
 //========================/ Section - about /===================================//
