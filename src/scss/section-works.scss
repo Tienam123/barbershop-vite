@@ -1,32 +1,11 @@
 //========================/ Section - Works /===================================//
 .works {
-   @include max-767 {
-padding: 84px 0;
-   }
-   @include min-768 {
-padding: 100px 0;
-   }
-   @include min-1200 {
-padding: 120px 0;
-   }
+   @include adaptiveValue("padding-top", 120, 84);
+   @include adaptiveValue("padding-bottom", 120, 84);
    background-color: #fff;
    // .works__title
    &__title {
-      font-weight: 600;
-      font-size: 11px;
-      line-height: 15px;
-      text-transform: uppercase;
-      color: #303030;
-      &::before {
-         content: " ";
-         display: inline-block;
-         width: 60px;
-         height: 1px;
-         background-color: rgba(157, 164, 189, 0.6);
-         position: relative;
-         top: -3px;
-         margin-right: 20px;
-   }}
+   }
    // .works__images-row
    &__images-row {
       margin-top: 44px;
@@ -45,9 +24,6 @@ padding: 120px 0;
 .images-row {
    // .images-row__item
    &__item {
-      @include max-767 {
-         max-width: 418px;
-      }
       @include min-768 {
          flex-basis: calc((100% - 30px) / 2);
       }

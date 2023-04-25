@@ -3,12 +3,17 @@
   position: relative;
 }
 .hero {
+  @include min480-max767 {
+    background: url("../img/hero-tablet-bg-x1.jpg") 0 0 no-repeat;
+    background-position: 50% 0%;
+    background-size: cover;
+  }
   // .hero__container
   &__container {
     position: relative;
-    @include max-767 {
+    @include max-479 {
       background: url("../img/hero-mobile-bg-x1.jpg") 0 0 no-repeat;
-      background-position: 50% 50%;
+      background-position: 50% 0%;
       background-size: cover;
     }
     @include min-1200 {
@@ -37,17 +42,6 @@
       background-color: $hovercolor;
     }
     &::before {
-      content: " ";
-      display: inline-block;
-      width: 3.75rem;
-      height: 0.0625rem;
-      background-color: $titlecolor;
-      position: absolute;
-      top: 0.625rem;
-      left: -2.5rem;
-      transform: translateX(-100%);
-      margin-right: 1.25rem;
-      transition: all $animation;
     }
   }
   // .hero__content
@@ -59,15 +53,16 @@
     }
 
     height: 100%;
-    padding: 17rem 0px 13rem 2.8125rem;
+    @include adaptiveValue("padding-top", 272, 208);
+    @include adaptiveValue("padding-bottom", 272, 208);
     @include max-767 {
-      padding: 13rem 0px 13.0625rem 1.9375rem;
+      padding-left: 30px;
     }
     @include min-768 {
-      width: 83%;
+      width: 90%;
+      padding-left: 100px;
     }
     @include min-1200 {
-      padding-left: 6.25rem;
       width: 90%;
     }
   }
@@ -90,10 +85,12 @@
   @include min-1200 {
     width: 10%;
   }
-  @include min768-max1199 {
+  @include min768-max991 {
     background-color: #fff;
-
-    width: 17%;
+    width: 12%;
+  }
+  @include min992-max1199 {
+    width: 10%;
   }
   @include max-767 {
     display: none;
@@ -105,42 +102,23 @@
   }
   // .hero-social__link
   &__link {
-    transition: color $animation;
-    &:hover,
-    &:focus {
-      color: $hovercolor;
-    }
   }
 }
 .hero-content {
   // .hero-content__subtitle
   &__subtitle {
-    color: $subtitleTextColor;
     margin-bottom: 1.25rem;
     &::before {
-      content: " ";
-      display: inline-block;
-      width: 3.75rem;
-      height: 0.0625rem;
-      background-color: $subtitleTextColor;
       position: relative;
       top: -0.1875rem;
-      margin-right: 1.25rem;
     }
   }
   // .hero-content__title
   &__title {
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    @include adaptiveValue("font-size", 72, 35);
-    color: #ffffff;
-    margin-bottom: 1.25rem;
-    line-height: 1.18;
   }
 
   // .hero-content__text
   &__text {
-    color: rgba(157, 164, 189, 1);
   }
 }
 .hero-content-actions {
@@ -148,13 +126,11 @@
   &__item {
     position: relative;
     &:nth-child(1) {
-      color: rgba(157, 164, 189, 0.6);
       &::before {
         background-color: rgba(157, 164, 189, 0.6);
       }
     }
     &:nth-child(2) {
-      color: #fff;
       &::before {
         background-color: #fff;
       }

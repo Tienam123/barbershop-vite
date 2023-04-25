@@ -1,14 +1,7 @@
 //========================/ Section - about /===================================//
 .about {
-   @include max-767 {
-      padding: 5.25rem 0;
-   }
-   @include min-768 {
-      padding: 6.25rem 0;
-   }
-   @include min-1200 {
-      padding: 7.5rem 0;
-   }
+   @include adaptiveValue("padding-top", 120, 84);
+   @include adaptiveValue("padding-bottom", 120, 84);
    // .about__container
    &__container {
       @include min-768 {

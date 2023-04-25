@@ -11,31 +11,24 @@
 	// .header__nav
 	&__nav {
 		display: flex;
-			justify-content: space-between;
-			align-items: center;
+		justify-content: space-between;
+		align-items: center;
 		@include min-1200 {
-			
 		}
 		@include min-768 {
 			display: flex;
-			justify-content:space-between;
+			justify-content: space-between;
 		}
 		@include max-767 {
 			margin-top: 2.5rem;
 		}
 
-		font-weight: 600;
-		font-size: 0.75rem;
-		line-height: 1.33;
-		letter-spacing: 0.1em;
-		color: #ffffff;
 		@include min-1200 {
 			margin-top: 2.5rem;
 		}
 	}
 	// .header__logo
 	&__logo {
-		color: #fff;
 		z-index: 3;
 		@include min-1200 {
 		}
@@ -43,8 +36,7 @@
 	// .header__menu
 	&__menu {
 		display: flex;
-			
-			
+
 		@include min-1200 {
 			margin-left: -6.25rem;
 			column-gap: 1.875rem;
@@ -63,34 +55,18 @@
 	}
 	// .header__link
 	&__link {
-		transition:color $animation;
-		&:hover,
-		&:focus {
-			color: $hovercolor;
-		}
 	}
 	// .header__mobile-menu
 	&__mobile-menu {
-		font-size: 1.125rem;
-		line-height: 1.38;
-		letter-spacing: 0.1em;
-		color: #303030;
 		margin-top: 7.375rem;
 		margin-bottom: 2.5rem;
 	}
 	// .header__mobile-actions
 	&__mobile-actions {
-		font-size: 1.125rem;
-		line-height: 1.38;
-		letter-spacing: 0.1em;
-
-		line-height: 1.38;
 		margin-bottom: 2.5rem;
 	}
 	// .header__mobile-social
 	&__mobile-social {
-		font-size: 0.875rem;
-		line-height: 1.35;
 	}
 	// .header__action-menu
 	&__action-menu {
@@ -123,7 +99,7 @@
 	}
 	&:hover,
 	&:focus {
-		color:$hovercolor;
+		color: $hovercolor;
 	}
 }
 .menu-button-icon {
@@ -183,7 +159,6 @@
 		fill: currentColor;
 		width: 1.125rem;
 		height: 1.125rem;
-		
 	}
 }
 .menu-button-close {
@@ -200,11 +175,6 @@
 	}
 	// .header-mobile__link
 	&__link {
-		transition: color $animation;
-		&:hover,
-		&:focus {
-			color: $hovercolor;
-		}
 	}
 }
 .header-mobile-actions {
@@ -216,13 +186,7 @@
 	}
 	// .header-action-menu__link
 	&__link {
-		transition: color $animation;
-		&:hover,
-		&:focus {
-			color: $hovercolor;
-		}
 		&_button {
-			
 		}
 	}
 	&__button {
@@ -252,11 +216,6 @@
 	}
 	// .mobile-social-header__link
 	&__link {
-		transition: color $animation;
-		&:hover,
-		&:focus {
-			color: $hovercolor;
-		}
 	}
 }
 .header-action-menu {
@@ -265,22 +224,9 @@
 	}
 	// .header-action-menu__link
 	&__link {
-		font-size: 0.75rem;
-		line-height: 1.33;
-		@include min768-max1199 {
-			margin-left: 20px;
-		}
-		transition: color $animation;
-		&:hover {
-			color: $hovercolor;
-		}
 	}
 	// .header-action-menu__button
 	&__button {
-		@include min768-max1199 {
-			font-size: 0.75rem;
-			line-height: 3.33;
-		}
 	}
 }
 
