@@ -75,7 +75,9 @@
       padding: 12px;
       background-color: #fff;
       border-radius: 50%;
-      &:hover svg {
+      transition: all $animation;
+      &:hover svg,
+      &:focus svg {
          fill: $hovercolor;
       }
       svg {

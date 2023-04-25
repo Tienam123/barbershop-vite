@@ -11,7 +11,7 @@
       content: " ";
       display: block;
       background: url("../img/footer-desktop-bg-x1.jpg");
-      z-index: 1;
+      z-index: -1;
       position: absolute;
       @include min-1200 {
          top: 0;
@@ -44,26 +44,32 @@
    // .contacts__form-wrapper
    &__form-wrapper {
       flex: 0 0 50%;
-      outline: 2px solid red;
+
       @include max-767 {
          padding-bottom: 84px;
       }
       @include min768-max1199 {
          padding-bottom: 100px;
+         padding: 0 20px 100px 20px;
       }
       @include min-1200 {
          padding-right: 25px;
+         padding-left: 25px;
       }
    }
    // .contacts__contact-wrapper
    &__contact-wrapper {
       flex: 0 0 50%;
-      outline: 2px solid yellow;
       @include max-767 {
          padding-top: 84px;
+         padding-left: 25px;
       }
       @include min768-max1199 {
          padding-top: 100px;
+         padding: 0 20px;
+      }
+      @include min-1200 {
+         padding-left: 100px;
       }
    }
 }

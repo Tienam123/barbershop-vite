@@ -581,7 +581,7 @@ body .is-active {
 }
 @media screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-resolution: 2dppx) and (min-width: 1200px) {
   .hero__container {
-    background: url("../img/hero-desktop-bg-x2.jpg") 0 0 no-repeat;
+    background: url("../img/hero-desktop-bg-x1.jpg") 0 0 no-repeat;
     background-position: top right;
   }
 }
@@ -1473,8 +1473,10 @@ body .is-active {
   padding: 12px;
   background-color: #fff;
   border-radius: 50%;
+  -webkit-transition: all 300ms ease-in;
+  transition: all 300ms ease-in;
 }
-.team-social__link:hover svg {
+.team-social__link:hover svg, .team-social__link:focus svg {
   fill: #ff6c00;
 }
 .team-social__link svg {
@@ -1632,7 +1634,7 @@ body .is-active {
   content: " ";
   display: block;
   background: url("../img/footer-desktop-bg-x1.jpg");
-  z-index: 1;
+  z-index: -1;
   position: absolute;
   opacity: 0.1;
   background-size: cover;
@@ -1675,7 +1677,6 @@ body .is-active {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 50%;
           flex: 0 0 50%;
-  outline: 2px solid red;
 }
 @media screen and (max-width: 767.98px) {
   .contacts__form-wrapper {
@@ -1685,27 +1686,35 @@ body .is-active {
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .contacts__form-wrapper {
     padding-bottom: 100px;
+    padding: 0 20px 100px 20px;
   }
 }
 @media screen and (min-width: 1200px) {
   .contacts__form-wrapper {
     padding-right: 25px;
+    padding-left: 25px;
   }
 }
 .contacts__contact-wrapper {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 50%;
           flex: 0 0 50%;
-  outline: 2px solid yellow;
 }
 @media screen and (max-width: 767.98px) {
   .contacts__contact-wrapper {
     padding-top: 84px;
+    padding-left: 25px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .contacts__contact-wrapper {
     padding-top: 100px;
+    padding: 0 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__contact-wrapper {
+    padding-left: 100px;
   }
 }
 
