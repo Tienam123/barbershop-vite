@@ -276,7 +276,7 @@
 	}
 }
 
-@mixin min768-max991-retina {
+@mixin min768-max1200-retina {
 	@media screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: map-get($breakpoints, tb992)) and (max-width: map-get($breakpoints, dsk1200)),
 		screen and (min-resolution: 192dpi) and (min-width: map-get($breakpoints, tb992)) and (max-width: map-get($breakpoints, dsk1200)),
 		screen and (min-resolution: 2dppx) and (min-width: map-get($breakpoints, tb992)) and (max-width: map-get($breakpoints, dsk1200)) {
